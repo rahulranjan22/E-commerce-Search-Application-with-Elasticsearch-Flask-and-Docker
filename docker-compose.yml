@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: ecommerce_app
+    ports:
+      - "5030:5030"
+    environment:
+      - ELASTICSEARCH_HOST=hostname
+      - ELASTICSEARCH_USERNAME=username
+      - ELASTICSEARCH_PASSWORD=password
+    volumes:
+      - .:/app

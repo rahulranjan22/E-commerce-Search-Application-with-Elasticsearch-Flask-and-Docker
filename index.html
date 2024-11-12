@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #5d1d29);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+             background-color: rgb(236, 140, 49);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .category-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .category-links a {
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .category-links a:hover {
+            background-color: #f39c12;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            text-align: center;
+            font-weight: bold;
+            color: rgb(0, 128, 47);
+            padding: 20px 0;
+            
+            /* Optional: to match the header background */
+        }
+
+        footer a {
+            color: rgb(227, 142, 30);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Product Search</h1>
+    </header>
+    <div class="category-links">
+        <a href="http://localhost:5030/category/Apparel">Apparel</a>
+        <a href="http://localhost:5030/category/Footwear">Footwear</a>
+        <a href="http://localhost:5030/category/Accessories">Accessories</a>
+        <a href="http://localhost:5030/category/Beauty">Beauty</a>
+        <a href="http://localhost:5030/category/Sportswear">Sportswear</a>
+    </div>
+    <div class="search-container">
+        <form action="http://localhost:5030/search" method="POST">
+            <input type="text" name="query" placeholder="Search for products...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <footer>
+        <p><a href="https://www.rahulranjan.org/" target="_blank">© 2024 Rahul Ranjan</a></p>
+    </footer>
+</body>
+
+</html>
